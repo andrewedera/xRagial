@@ -1,0 +1,236 @@
+
+// Fonts
+// @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.no-js #browser-loader {
+    display: none;
+}
+html, body {
+    background-color: #f2f3f8;
+    cursor: url(/images/normal.cur), auto; 
+    color: #636b6f;
+    position: relative;
+    font-family: $font-family-sans-serif;
+}
+.initialism {
+    text-transform: none;
+}
+.home {
+	h1 {
+	    font-family: $font-headings;
+		display: inline-block;
+	    font-weight: 600;
+	    font-size: 5em;
+
+	    span {
+	    	font-weight: 100;
+		    transform: rotate(15deg);
+		    display: inline-block;
+	    }
+	}
+}
+.container {
+    overflow: hidden;
+}
+.content {
+    text-align: center;
+}
+.main-content {
+    color: #636b6f;
+    padding: 25px;
+    font-weight: 400;
+    letter-spacing: .1rem;
+    text-decoration: none;
+}
+.form-control {
+    border-color: #ebedf2;
+    border-radius: .25rem;
+    box-shadow: none;
+
+    &:focus {
+	    border-color: #8eb4cb;
+	    box-shadow: none;
+	}
+}
+
+.search {
+    margin-top: 1.5em;
+
+    input,
+    button {
+    	height: 45px;
+    }
+
+    button {
+    	color: #fff !important;
+	    background-color: #34bfa3;
+	    border-color: #34bfa3;
+		outline: 0 !important;
+
+	    &:hover,
+	    &:active {
+	    	background-color: lighten(#34bfa3,5%);
+	    	border-color: lighten(#34bfa3,5%);
+	    }
+		&:focus {
+			background-color: darken(#34bfa3,5%);
+	    	border-color: darken(#34bfa3,5%);
+		}
+    }
+}
+.pagination {
+	.disabled {
+		span {
+			background: none !important;
+			border: none;
+		}
+	}
+	& > li {
+		&.active {
+			span,
+			& span:hover {
+				color: #fff !important;
+				background-color: #34bfa3;
+    			border-color: #34bfa3;
+			}
+		}
+		& > a {
+			&:active {
+		    	transform: scale(0.9);
+			}
+			&:hover {
+				background-color: #f2f2f2;
+			}
+		}
+		& > a,
+		& > span {
+			color: #8eb4cb !important;
+			margin: 0 .2em;
+			border: 1px solid #e6e6e6;
+    		border-radius: 0.25em;
+		}
+	}
+}
+.table {
+    margin: 0;
+    font-size: 12px;
+
+    a {
+    	display: block;
+    	text-decoration: none;
+    }
+
+    th {
+    	text-align: center;
+	    color: #fff;
+	    background-color: #212529;
+	    border-bottom: 0 !important;
+    }
+}
+.pad0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.panel {
+    border: 1px solid #ebedf2;
+    box-shadow: 0 1px 15px 1px rgba(113,106,202,.08);
+}
+.panel-body {
+    padding: 0;
+
+    td {
+	    border-color: #ebedf2;
+	    border-bottom-style: dashed;
+	}
+
+	tr {
+		&:last-child {
+			td {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+.panel-heading {
+    border-bottom: 1px solid #ebedf2;
+    cursor: pointer;
+
+    .la {
+	    transition: .3s transform ease-in-out;
+	}
+
+	&[aria-expanded="true"] .la {
+	    transform: rotate(90deg);
+	}
+}
+.price {
+    font-size: 11px;
+}
+.la-link {
+    font-size: 16px;
+    font-weight: 600;
+}
+.clickable {
+    cursor: pointer;
+}
+.footer {
+    background-color: rgb(40, 42, 44);
+    padding: 20px;
+    color: #7c7d7e;
+    text-align: center;
+}
+.la-heart {
+    color: #bc2a4d;
+}
+
+.animate-pulse {
+    -webkit-animation: pulse 2s infinite linear;
+    animation: pulse 2s infinite linear;
+}
+@keyframes pulse {
+    0%, 30% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    40% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+    50%, 60% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    70% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100%, 80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+}
+#browser-loader {
+    display: block;
+    text-align: center;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    background: #0b0c0e;
+    height: 100%;
+    opacity: .4;
+    box-shadow: inset #1F2D3D -1px 0 0;
+}
